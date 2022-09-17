@@ -7,8 +7,8 @@ export class CustomersService {
   findCustomers() {
     return customersData;
   }
-  findCustomerById(id: string) {
-    return customersData.filter((customer: Customer) => {
+  async findCustomerById(id: number) {
+    return await customersData.find((customer: Customer) => {
       return id === customer.id;
     });
   }
