@@ -1,12 +1,14 @@
 import { Exclude } from 'class-transformer';
 
 export interface User {
-  userName: string;
+  id: number;
+  email?: string;
+  username: string;
   password: string;
 }
 
 export class SerializedUser {
-  userName: string;
+  username: string;
 
   @Exclude()
   password: string;
